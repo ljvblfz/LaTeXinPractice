@@ -1,0 +1,16 @@
+% \usepackage{siunitx}
+\begin{tikzpicture}
+  \newcommand\iangle{120}
+  \draw[->] (-1.2,0) -- (1.2,0);
+  \draw[->] (0,-1.2) -- (0,1.2);
+  \draw[thick] (0,0) circle (1);
+  \coordinate[label=\iangle:$P$] (P) at (\iangle:1);
+  \coordinate[label=below:$P_0$] (P0) at (P |- 0,0);
+  \draw (0,0) -- (P);
+  \draw (P) -- (P0);
+  \fill[fill=gray,fill opacity=0.2]
+    (0,0) -- (0:1) arc (0:\iangle:1) -- cycle;
+  \filldraw[fill=gray,fill opacity=0.5]
+    (0,0) -- (0:0.3) arc (0:\iangle:0.3) -- cycle;
+  \node[right] at (\iangle/2:0.3) {\ang{\iangle}};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\usepackage{enumitem}
+% 仿照 enumerate 环境定义可二级嵌套的 mylist
+\newlist{mylist}{enumerate}{2}
+% 分别定义每级的格式
+\setlist[mylist,1]{itemsep=0pt,parsep=0pt,label=(\arabic*)}
+\setlist[mylist,2]{itemsep=0pt,parsep=0pt,label=(\alph*)}

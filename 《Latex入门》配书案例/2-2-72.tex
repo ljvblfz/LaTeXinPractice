@@ -1,0 +1,10 @@
+\newsavebox{\verbatimbox} % 通常在导言区定义
+\begin{lrbox}{\verbatimbox}
+\begin{minipage}{10em}
+\begin{verbatim}
+#!/bin/sh
+cat ~/${file}
+\end{verbatim}
+\end{minipage}
+\end{lrbox}
+\fbox{\usebox{\verbatimbox}}\quad\fbox{\usebox{\verbatimbox}}

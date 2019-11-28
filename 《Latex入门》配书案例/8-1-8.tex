@@ -1,0 +1,8 @@
+\def\bigchinese#1{%
+  \ifcase\value{#1}%
+    零\or 壹\or 贰\or 叁\or 肆\or 伍\or 陆\or 柒\or 捌\or 玖\else 溢出
+  \fi}
+\renewcommand\theenumi{\bigchinese{enumi}}
+\begin{enumerate}\sffamily
+  \item 1 \item 2 \item 3
+\end{enumerate}

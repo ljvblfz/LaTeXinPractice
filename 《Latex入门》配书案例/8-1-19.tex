@@ -1,0 +1,3 @@
+% 在 boldemph.sty 中，给 emph 增加加粗的功能
+\let\boldmath@oldemph\emph
+\def\emph#1{\textbf{\boldemph@oldemph{#1}}}

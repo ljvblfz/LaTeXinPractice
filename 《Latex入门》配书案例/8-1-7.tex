@@ -1,0 +1,9 @@
+% \usepackage{changepage}
+\def\outside#1{%
+  \checkoddpage % 设置自动交叉引用
+  \ifoddpage    % 使用交叉引用并检查页码奇偶
+    {\raggedleft #1$\rightarrow$}% 奇数页右侧
+  \else
+    {\raggedright $\leftarrow$#1}% 偶数页左侧
+  \fi}
+\outside{\textsf{向外侧对齐}}

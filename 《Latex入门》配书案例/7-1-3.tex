@@ -1,0 +1,6 @@
+% 将 txfonts 定义的重积分符号定义为 \TXFiint，保留原来 amsmath 的 \iint
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{iint}
+\usepackage{txfonts}
+\restoresymbol{TXF}{iint}

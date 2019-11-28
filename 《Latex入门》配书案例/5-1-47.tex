@@ -1,0 +1,8 @@
+% \usepackage{array}
+\newcolumntype{M}{>{$}c<{$}}
+\newcolumntype{P}[1]{>{\setlength\parindent{2em}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+% 使用新的列格式：
+\begin{tabular}{|M|P{15em}|C{4em}|}
+  ...
+\end{tabular}

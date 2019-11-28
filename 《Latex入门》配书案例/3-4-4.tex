@@ -1,0 +1,12 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{imakeidx}
+\makeindex[title={名词索引}]
+\makeindex[name=persons,title={人名索引}]
+
+\begin{document}
+... \index{名词}
+... \index[persons]{人名}
+...
+\printindex           % 输出名词索引
+\printindex[persons]  % 输出人名索引
+\end{document}

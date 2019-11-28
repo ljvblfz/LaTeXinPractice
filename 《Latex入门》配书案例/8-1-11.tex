@@ -1,0 +1,7 @@
+% \usepackage{etoolbox}
+\sffamily
+\ifnumcomp{\value{page}+1}>{10*10}{大页码}{小页码}，
+\ifboolexpr{not test {\ifnumodd{\value{page}}}
+            and test {\ifdimcomp{\linewidth}>{5cm+20pt/2}}}%
+  {是}{不是}%
+偶数页宽行。

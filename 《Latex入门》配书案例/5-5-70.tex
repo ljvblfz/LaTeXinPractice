@@ -1,0 +1,7 @@
+% 导言区使用
+\usepackage[shellescape,latex]{gmp}
+\usempxpackage{CJKutf8}
+\mpxcommands{
+  \AtBeginDocument{\begin{CJK*}{UTF8}{gbsn}}
+  \AtEndDocument{\clearpage\end{CJK*}}
+}

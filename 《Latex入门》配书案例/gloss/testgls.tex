@@ -1,0 +1,27 @@
+% testgls.tex
+%   最简单的手工词汇表测试
+\documentclass[UTF8]{ctexart}
+% 打开 \glossary 命令的写文件功能
+\makeglossary
+% 定义 theglossary 环境为 itemize 环境的别称
+\newenvironment{theglossary}
+  {\begin{itemize}}{\end{itemize}}
+% 定义输出词汇表就是读文件
+\newcommand\printglossary{%
+  \InputIfFileExists{\jobname.gls}{\section*{词汇表}}{}}
+
+\begin{document}
+% 第 1 页
+% 在正文中定义词汇表条目，前面是排序项，后面是输出格式
+\glossary{LaTeX@\LaTeX：基于 \TeX{} 的文档处理系统。}
+\LaTeX{} 的内容……
+
+\newpage
+% 第 2 页
+\glossary{Makeindex@Makeindex：索引排序程序。}
+Makeindex 的内容……
+
+% 输出词汇表
+\clearpage
+\printglossary
+\end{document}

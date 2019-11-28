@@ -1,0 +1,17 @@
+% 通常是在某 .sty 或 .cls 中
+% \RequirePackage{keyval}
+% 定义 text 族的 emph 选项，控制 \emph 命令的定义
+\let\text@emph=\emph
+\define@key{text}{emph}[\text@emph]{%
+  \let\emph=#1}
+\newcommand\settext[1]{%
+  \setkeys{text}{#1}}
+
+% 在 .tex 文件中使用
+\begin{quotation}
+\settext{emph=\textbf}  % 粗体
+An \emph{important} example.
+
+\settext{emph}  % 默认的格式
+An \emph{important} example.
+\end{quotation}

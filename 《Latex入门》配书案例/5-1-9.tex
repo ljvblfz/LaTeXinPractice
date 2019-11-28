@@ -1,0 +1,10 @@
+% 导言区 \usepackage{dcolumn}
+\newcolumntype{d}{D{.}{.}{2}}
+\begin{tabular}{|c|*{3}{d|}}  % 相当于 |c|d|d|d|
+\hline
+姓名 & \multicolumn{1}{c|}{张三} & \multicolumn{1}{c|}{李四}
+     & \multicolumn{1}{c|}{王五} \\ \hline
+收入 & 12345.6  & 5000   &   1020.55 \\ \hline
+支出 &   765.43 & 5120.5 &  98760    \\ \hline
+节余 & 11580.17 & -120.5 & -97739.45 \\ \hline
+\end{tabular}

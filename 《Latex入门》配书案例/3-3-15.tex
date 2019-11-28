@@ -1,0 +1,21 @@
+% main.tex
+% 主文档
+\documentclass{book}
+\usepackage{chapterbib}
+\usepackage[sectionbib]{natbib}
+\begin{document}
+  % ...
+  \include{chap-intro}
+  \include{chap-research}
+  \include{chap-conclusion}
+\end{document}
+
+% chap-intro.tex
+% 其中一章
+\chapter{Introduction}
+% ...
+\bibliographystyle{plainnat}
+\bibliography{foo}
+
+% chap-research.tex
+% ...

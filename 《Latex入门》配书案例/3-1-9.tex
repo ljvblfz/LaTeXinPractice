@@ -1,0 +1,10 @@
+\documentclass{ctexbook} % 或 ctexrep, ctexart
+\usepackage{tocloft}
+\makeatletter
+\renewcommand{\numberline}[1]{%
+  \settowidth\@tempdimb{#1\hspace{0.5em}}%
+  \ifdim\@tempdima<\@tempdimb%
+    \@tempdima=\@tempdimb%
+  \fi%
+  \hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
+\makeatother

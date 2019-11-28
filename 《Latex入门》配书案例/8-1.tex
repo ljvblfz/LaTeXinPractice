@@ -1,0 +1,16 @@
+\begin{codebox}
+\Procname{$\proc{BinSearch}(A, x, L, H)$}
+\li \While $L\le H$ \RComment $L$ 与$H$ 是左右分点
+\li   \Do $M \gets \lfloor(L+H)/2\rfloor$ \RComment $M$ 是中间分点
+\li     \If $x > A[M]$
+\li       \Then $H \gets M-1$
+\li     \ElseIf $x < A[M]$
+\li       \Then $H \gets M+1$
+\li     \ElseNoIf \RComment 找到 $x$，返回位置
+\li       $j \gets M$
+\li       \Return $j$
+      \End
+    \End
+\li $j \gets 0$
+\li \Return $j$
+\end{codebox}

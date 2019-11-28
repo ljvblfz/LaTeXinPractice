@@ -1,0 +1,5 @@
+\newsavebox{\verbbox} % 通常在导言区定义
+\begin{lrbox}{\verbbox}
+\verb|#$%^&{}|
+\end{lrbox}
+\usebox{\verbbox} \fbox{\usebox{\verbbox}}

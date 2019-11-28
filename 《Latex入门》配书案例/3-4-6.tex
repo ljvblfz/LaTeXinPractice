@@ -1,0 +1,29 @@
+\documentclass[UTF8]{ctexbook}
+\usepackage{imakeidx}
+\makeindex[%
+  name=persons,           % 索引文件名（默认为 \jobname，即主文件名）
+  title={人名索引},       % 索引表标题（默认为 \indexname）
+  intoc=true,             % 加入目录（默认为 false，不加入目录）
+  columns=2,              % 分栏（默认为 1）
+  columnsep=1cm,          % 栏间距（默认为 35pt）
+  columnseprule=true,     % 分栏线（默认为 false）
+  program=makeindex,      % 调用的索引程序（或用 xindy、texindy）
+  options={-s mkind.ist}, % 索引程序的选项（默认为空）
+  noautomatic=false       % 不自动调用索引程序（默认为 false）
+]
+\indexsetup{%
+  level=\section*,        % 标题级别（默认 \chapter* 即不编号的章）
+  toclevel=section,       % 目录级别（不带反斜线，又如 chapter）
+  firstpagestyle=empty,   % 索引第一页的页面风格（默认为 plain）
+  headers={人名}{人名},   % 索引的奇偶页眉
+  othercode={             % 将在索引条目之前生效的任意代码
+    \renewcommand{\indexspace}{\smallskip}}
+}
+\begin{document}
+张三\index[persons]{张三} \newpage
+李四\index[persons]{李四} \newpage
+王五\index[persons]{王五}
+
+\indexprologue{这里列出本文涉及的所有人名。}
+\printindex[persons]
+\end{document}

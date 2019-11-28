@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+% 坐标轴
+\draw[->] (0,0) -- ({rad(210)}, 0);
+\draw[->] (0,-1.2) -- (0,1.2);
+% 文字标签与刻度
+\foreach \t in {0, 90, 180} {                           % 遍历三个角度
+  \draw ({rad(\t)}, -0.05) -- ({rad(\t)}, 0.05);        % 画刻度线
+  \node[below, outer sep=2pt, fill=white, font=\small]  % 标注横轴角度
+    at ({rad(\t)}, 0) {\ang{\t}};
+}
+\foreach \y in {-1,1} {\draw (-0.05,\y) -- (0.05,\y);}  % 纵轴刻度
+\end{tikzpicture}

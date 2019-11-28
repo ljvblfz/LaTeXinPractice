@@ -1,0 +1,6 @@
+\begin{theglossary}
+
+  \item \LaTeX：基于 \TeX{} 的文档处理系统。\dotfill 1
+  \item Makeindex：索引排序程序。\dotfill 2
+
+\end{theglossary}

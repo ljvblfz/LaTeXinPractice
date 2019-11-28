@@ -1,0 +1,8 @@
+% 中文文档类会设定好标题的第一种语言
+\documentclass{ctexart}
+\usepackage{bicaption}
+% 声明 english 选项重定义第二种语言的标签名，选项没有参数
+\DeclareCaptionOption{english}[]{%
+  \renewcommand\figurename{Figure}%
+  \renewcommand\tablename{Table}}
+\captionsetup[bi-second]{english}

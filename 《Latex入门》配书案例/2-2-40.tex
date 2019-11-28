@@ -1,0 +1,9 @@
+% 导言区
+\usepackage[thmmarks]{ntheorem}
+{   % 利用分组，格式设置只作用于证明环境
+  \theoremstyle{nonumberplain}
+  \theoremheaderfont{\bfseries}
+  \theorembodyfont{\normalfont}
+  \theoremsymbol{\mbox{$\Box$}} % 放进盒子，或用 \ensuremath
+  \newtheorem{proof}{证明}
+}

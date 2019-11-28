@@ -1,0 +1,10 @@
+% 将参数 #2 输出 2^#1 次
+\def\recur#1#2{%
+  \ifnum #1=0\relax%
+    #2 %
+  \else
+    \setcounter{enumi}{#1}%
+    \addtocounter{enumi}{-1}%
+    \recur{\value{enumi}}{#2 #2}%
+  \fi}
+\textsf{\recur0a\recur1b\recur2c\recur3d}

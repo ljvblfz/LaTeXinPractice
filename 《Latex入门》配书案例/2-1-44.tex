@@ -1,0 +1,8 @@
+% XeLaTeX 编译
+\documentclass[UTF8]{ctexart}
+\usepackage{tipa}% 宏包已经正确加载 fontenc
+% \mytipa 的定义参考原来的 \textipa 的旧定义，手工切换编码
+\newcommand\mytipa[1]{{\fontencoding{T3}\selectfont#1}}
+\begin{document}
+\LaTeX{} 读音为 \mytipa{["lA:tEx]}。
+\end{document}

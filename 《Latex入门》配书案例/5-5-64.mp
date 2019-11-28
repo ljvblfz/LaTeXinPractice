@@ -1,0 +1,1 @@
+outputtemplate := "%j-%c.mps";

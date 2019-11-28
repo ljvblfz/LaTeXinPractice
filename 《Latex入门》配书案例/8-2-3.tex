@@ -1,0 +1,8 @@
+% \usepackage{pgfplotstable,booktabs}
+\pgfplotstableset{
+  every head row/.style={
+    before row=\toprule,after row=\midrule},
+  every last row/.style={
+    after row=\bottomrule},
+  column type=r, col sep=comma}
+\pgfplotstabletypeset{temperature.csv}

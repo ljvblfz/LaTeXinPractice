@@ -1,0 +1,10 @@
+% 计数器设置，通常在导言区
+\newcounter{mycnt}
+\setcounter{mycnt}{0}                   % 默认值就是 0
+\renewcommand\themycnt{\arabic{mycnt}}  % 默认值就是阿拉伯数字
+% 计数器使用，通常做成自定义命令的一部分
+\stepcounter{mycnt}\themycnt 输出计数器值为 1；
+\stepcounter{mycnt}\themycnt 输出计数器值为 2；
+\addtocounter{mycnt}{1}\themycnt 输出计数器值为 3；
+\addtocounter{mycnt}{-1}\themycnt 输出计数器值为 2；
+\addtocounter{mycnt}{-1}\themycnt 输出计数器值为 1。

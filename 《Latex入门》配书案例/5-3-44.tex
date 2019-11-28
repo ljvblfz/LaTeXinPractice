@@ -1,0 +1,17 @@
+% \usepackage{caption,subcaption}
+\begin{table}
+  \caption{子图表环境}
+  \begin{subtable}[b]{.5\textwidth}
+    \centering
+    \begin{tabular}{|c|c|} \hline 图 & 表 \\ \hline \end{tabular}
+    \caption{文字表格}
+  \end{subtable}%
+  \begin{subtable}[b]{.5\textwidth}
+    \centering
+    $\begin{array}{|c|c|}
+      \hline \sqrt{2} & 1.414\dots \\ \hline
+      \sqrt{3} & 1.732\dots \\ \hline
+    \end{array}$
+    \caption{数学表格}
+  \end{subtable}
+\end{table}

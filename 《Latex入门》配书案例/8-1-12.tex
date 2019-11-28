@@ -1,0 +1,10 @@
+% \usepackage{etoolbox}
+\begin{math}
+\setcounter{enumi}{1}
+\whileboolexpr{not test {\ifnumcomp{\value{enumi}}>{30}}}%
+{
+  \mathsf{\theenumi}\rightarrow
+  \stepcounter{enumi}
+}
+\cdots
+\end{math}

@@ -1,0 +1,7 @@
+% simplegloss.ist
+%   最简单的手工词汇表 Makeindex 格式
+keyword	    "\\glossaryentry"
+preamble    "\\begin{theglossary}\n"
+postamble   "\n\n\\end{theglossary}\n"
+group_skip  ""
+delim_0	    "\\dotfill "

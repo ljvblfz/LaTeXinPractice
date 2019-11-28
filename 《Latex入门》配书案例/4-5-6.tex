@@ -1,0 +1,10 @@
+\newenvironment{mysubeqn}%
+  {\begin{subequations}
+    \renewcommand\theequation{\theparentequation-\roman{equation}}}%
+  {\end{subequations}}
+\begin{mysubeqn}
+\begin{gather}
+  \zeta(2) = \frac{\uppi^2}{6} \\
+  \zeta(s) = \prod_{p\text{ prime}} \frac{1}{1 - p^{-s}}
+\end{gather}
+\end{mysubeqn}
